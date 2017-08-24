@@ -1,0 +1,13 @@
+Data Structures
+A way of organizing data that enables efficient storage, retrieval, and use.
+
+Arrays
+A type of data structure that stores elements of the same type (generally). It's important to note that you'll often see arrays referred to as A in documentation, but the variable names you use when coding should be descriptive and begin with lowercase letters.
+
+You can think of an array,A,of size n as a contiguous block of cells sequentially indexed from 0 to n-1 which serve as containers for elements of 
+the array's declared data type. To store an element,value,in some index i of array A,use the syntax A[i] and treat it as you would any other 
+variable(i.e., A[i] = value;). 
+
+Most languages also have a method, attribute, or member that allows you to retrieve the size of an array. In Java, arrays have a length attribute; in other words, you can get the length of some array, arrayName, by using the arrayName.length syntax.
+
+Note: The final keyword used in the code above is a means of protecting the variable's value by locking it to its initialized value. Any attempt to reassign (overwrite) the value of a final variable will generate an error.
