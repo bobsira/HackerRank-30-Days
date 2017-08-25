@@ -1,0 +1,36 @@
+Radix (Base)
+The number of digits that can be used to represent a number in a positional number system. The decimal number system(base-10) has 10 
+digits (0,1,2,3,4,5,6,7,8,9); the binary(base-2) number system has 2 digits(0,1).
+
+We think in terms of base-10, because the decimal number system is the only one many people need in everyday life. For situations 
+where there is a need to specify a number's radix, number n having radix r should be written as (n)r.
+
+Binary to Decimal Conversion
+In the same way that (840)base10 = (8*10^2)+(4*10^1)+(0*10^0) =800+40+0=840, a binary number having k digits in the form of 
+dsubk-1 dsubk-2 ... dsub2 dsub1 dsub0 can be converted to decimal by summing the result for each dsubi * 2^i where 0<= i >= k-1 is 
+the most significant bit, and i = 0 is the least significant bit.
+
+For example: (1011)base2 -> (?)base10 is evaluated as
+(1*2^3)+(0*2^2)+(1*2^1)+(1*2^0)=8+0+2+1=(11)base10.
+
+Binary to Decimal Conversion
+To convert an integer from decimal to binary, repeatedly divide yout base-10 number,n, by 2. The dividend at each step i should be 
+the result of the integer division at each step i - 1. The remainder at each step of division is a single digit of the binary equivalent
+of n; if you read each remainder in order from the last remainder to the first,you have the entire binary number.
+
+For example: (4)base10  -> (?)base2. After performing the steps outlined in the above paragraph,the remainders form (100)base2 
+(the binary equivalent of (4)base10) when read from bottom up:
+
+4 / 2 = 2 remainder 0 
+2 / 2 = 1 remainder 0
+1 / 2 = 0 remainder 1
+
+This can be expressed in pseudocode as:
+
+while(n>0):
+	remainder = n%2;
+	n = n/2;
+	Insert remainder to front of a list or push onto a stack
+Print list or stack
+
+Many languages have built-in functions for converting numbers from decimal to binary. To convert an integer,n , from decimal to a String of binary numbers in Java, you can use the Integer.toBinaryString(n) function.
